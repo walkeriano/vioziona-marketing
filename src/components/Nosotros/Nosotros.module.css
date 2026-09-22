@@ -1,0 +1,228 @@
+.section {
+  display: grid;
+  height: 100vh;
+  min-height: 680px;
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(32px, 6vh, 76px) clamp(24px, 7.8vw, 162px);
+  background: #ffffff;
+}
+
+.content {
+  display: grid;
+  width: min(1740px, 100%);
+  margin: 0 auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 654px);
+  gap: clamp(56px, 8.4vw, 164px);
+  align-items: center;
+  overflow: hidden;
+}
+
+.copy {
+  min-width: 0;
+}
+
+.label {
+  margin-bottom: clamp(20px, 3vh, 34px);
+  color: #616161;
+  font-size: clamp(0.72rem, 0.66rem + 0.2vw, 0.86rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.title {
+  display: grid;
+  color: #464646;
+  font-size: clamp(2.25rem, 3.9vw, 3.95rem);
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.title strong {
+  color: #ef927f;
+  font-weight: 800;
+}
+
+.description {
+  max-width: 720px;
+  margin-top: clamp(30px, 5.4vh, 62px);
+  color: #4e4e4e;
+  font-size: clamp(1.05rem, 1.35vw, 1.55rem);
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.pillars {
+  display: grid;
+  max-width: 650px;
+  grid-template-columns: repeat(4, max-content);
+  gap: clamp(34px, 4.9vw, 72px);
+  margin-top: clamp(34px, 6vh, 64px);
+}
+
+.pillar span {
+  display: block;
+  margin-bottom: 8px;
+  color: #ef927f;
+  font-size: clamp(0.82rem, 0.88vw, 1rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pillar p {
+  color: #464646;
+  font-size: clamp(1rem, 1.2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.quote {
+  width: min(710px, 100%);
+  margin-top: clamp(34px, 6vh, 66px);
+  padding: clamp(24px, 3.3vh, 35px) clamp(30px, 3.7vw, 40px);
+  border-radius: 21px;
+  background: #efefef;
+}
+
+.quote blockquote {
+  color: #36848c;
+  font-size: clamp(1.05rem, 1.35vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.imageWrap {
+  display: grid;
+  height: min(760px, calc(100vh - clamp(64px, 12vh, 152px)));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 1.4vw, 24px);
+  width: 100%;
+  max-height: calc(100vh - clamp(64px, 12vh, 152px));
+  overflow: hidden;
+}
+
+.imagePanel {
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: clamp(24px, 2.6vw, 38px);
+  background: #efefef;
+}
+
+.imageLeft,
+.imageRight {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.imageLeft {
+  object-position: center center;
+}
+
+.imageRight {
+  object-position: center center;
+}
+
+@media (max-width: 1180px) {
+  .section {
+    height: auto;
+    min-height: auto;
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .imageWrap {
+    justify-self: start;
+    width: min(560px, 100%);
+  }
+}
+
+@media (min-width: 1181px) and (max-height: 760px) {
+  .section {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .label {
+    margin-bottom: 24px;
+  }
+
+  .description {
+    margin-top: 38px;
+    font-size: var(--text-base);
+  }
+
+  .pillars {
+    margin-top: 44px;
+  }
+
+  .quote {
+    margin-top: 44px;
+  }
+
+  .imageWrap {
+    width: min(520px, 100%);
+  }
+
+  .imageWrap {
+    max-height: calc(100vh - 84px);
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 72px 16px;
+  }
+
+  .label {
+    margin-bottom: 22px;
+    letter-spacing: 1.7px;
+  }
+
+  .title {
+    font-size: clamp(2.15rem, 9.5vw, 3.25rem);
+  }
+
+  .description {
+    margin-top: 34px;
+    font-size: var(--text-base);
+  }
+
+  .pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 32px;
+    margin-top: 38px;
+  }
+
+  .quote {
+    margin-top: 40px;
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .quote blockquote {
+    font-size: var(--text-base);
+  }
+
+  .imageWrap {
+    width: 100%;
+    height: min(680px, 118vw);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    max-height: none;
+  }
+}

@@ -1,0 +1,306 @@
+.section {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  padding: clamp(120px, 17vh, 190px) clamp(28px, 4.8vw, 102px)
+    clamp(58px, 7.4vh, 78px);
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 94% 82%,
+      rgba(42, 103, 115, 0.42) 0,
+      rgba(42, 103, 115, 0.16) 22%,
+      rgba(3, 15, 25, 0) 42%
+    ),
+    radial-gradient(
+      circle at 19% 8%,
+      rgba(35, 83, 96, 0.36) 0,
+      rgba(35, 83, 96, 0.12) 24%,
+      rgba(3, 15, 25, 0) 46%
+    ),
+    #051728;
+}
+
+.content {
+  display: grid;
+  width: min(1760px, 100%);
+  margin: 0 auto;
+  grid-template-columns: minmax(430px, 0.82fr) minmax(520px, 1fr);
+  gap: clamp(50px, 6.2vw, 110px);
+  align-items: center;
+}
+
+.copy {
+  min-width: 0;
+  padding-top: clamp(10px, 3.4vh, 42px);
+  animation: joinFromLeft 980ms cubic-bezier(0.2, 0.8, 0.2, 1) 120ms both;
+  will-change: transform, opacity;
+}
+
+.label {
+  margin-bottom: clamp(20px, 3vh, 34px);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(0.72rem, 0.66rem + 0.2vw, 0.86rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 2.3px;
+  text-transform: uppercase;
+}
+
+.copy h1 {
+  display: grid;
+  max-width: 660px;
+  color: #ffffff;
+  font-size: clamp(2.35rem, 4.35vw, 4.3rem);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: 0;
+}
+
+.copy h1 strong {
+  color: #ef927f;
+  font-weight: 800;
+}
+
+.text {
+  max-width: 620px;
+  margin-top: clamp(32px, 5vh, 58px);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.05rem, 1.35vw, 1.55rem);
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 1.7vw, 24px);
+  margin-top: clamp(34px, 5.5vh, 58px);
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  min-height: clamp(46px, 5.3vh, 56px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: clamp(0.88rem, 0.95vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.primaryButton {
+  gap: 11px;
+  padding: 0 clamp(22px, 2vw, 28px);
+  color: #ffffff;
+  background: #438992;
+}
+
+.primaryButton span {
+  font-size: 1.55em;
+  line-height: 0.5;
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  min-width: clamp(140px, 8.7vw, 178px);
+  padding: 0 24px;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  color: #ffffff;
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible,
+.secondaryButton:hover,
+.secondaryButton:focus-visible {
+  color: #04111c;
+  background: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.imageContainer {
+  position: relative;
+  width: 95%;
+  height: 80%;
+  overflow: hidden;
+  animation: joinFromRight 1050ms cubic-bezier(0.2, 0.8, 0.2, 1) 180ms both;
+  will-change: transform, opacity;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right bottom;
+  border-radius: 45px;
+}
+
+.scrollHint {
+  position: absolute;
+  left: clamp(28px, 4vw, 82px);
+  bottom: clamp(50px, 7.3vh, 82px);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(67, 137, 146, 0.86);
+  font-size: clamp(0.78rem, 0.72rem + 0.22vw, 0.95rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  animation: fadeUp 720ms ease 880ms both;
+}
+
+.scrollHint span {
+  font-size: 1.55em;
+  line-height: 0.5;
+  transform: translateY(-1px);
+}
+
+@keyframes joinFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-9vw) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes joinFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(9vw) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1181px) and (max-height: 780px) {
+  .section {
+    min-height: 620px;
+    padding-top: 106px;
+    padding-bottom: 42px;
+  }
+
+  .label {
+    margin-bottom: 24px;
+  }
+
+  .copy h1 {
+    font-size: clamp(2.25rem, 4vw, 3.6rem);
+  }
+
+  .text {
+    margin-top: 34px;
+    font-size: clamp(0.98rem, 1.15vw, 1.2rem);
+  }
+
+  .buttons {
+    margin-top: 42px;
+  }
+
+  .imageContainer {
+    max-height: calc(100vh - 170px);
+  }
+
+  .scrollHint {
+    bottom: 36px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .section {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 128px;
+    padding-bottom: 64px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .copy {
+    padding-top: 0;
+  }
+
+  .imageContainer {
+    justify-self: start;
+    width: min(760px, 100%);
+    max-height: none;
+  }
+
+  .scrollHint {
+    position: static;
+    margin-top: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy,
+  .imageContainer,
+  .scrollHint {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 112px 16px 54px;
+  }
+
+  .label {
+    margin-bottom: 24px;
+    letter-spacing: 1.7px;
+  }
+
+  .copy h1 {
+    font-size: clamp(2.15rem, 9.5vw, 3.25rem);
+  }
+
+  .text {
+    margin-top: 30px;
+    font-size: var(--text-base);
+  }
+
+  .buttons {
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    flex: 1 1 220px;
+    min-height: 54px;
+  }
+}
