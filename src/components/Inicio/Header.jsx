@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import styles from "./Header.module.css";
 
@@ -8,28 +9,32 @@ const navigation = [
   { key: "inicio", href: "#inicio" },
   { key: "nosotros", href: "#nosotros" },
   { key: "servicios", href: "#servicios" },
+  { key: "suscripciones", href: "#suscripciones" },
   { key: "contacto", href: "#contacto" },
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const { language, setLanguage, t } = useLanguage();
+  const isHome = pathname === "/";
+  const resolveHref = (href) => (isHome ? href : `/${href}`);
 
   return (
     <header className={styles.header}>
-      <a className={styles.logoLink} href="#inicio" aria-label="Viziona">
-        <Image src="/logo.png" alt="Viziona" width={953} height={197} className={styles.logo} priority />
+      <a className={styles.logoLink} href={resolveHref("#inicio")} aria-label="Viziona">
+        <Image src="/logo.png" alt="Viziona" width={157} height={32} className={styles.logo} priority />
       </a>
 
       <nav className={styles.nav} aria-label={t.header.aria.main}>
         {navigation.map((item) => (
-          <a href={item.href} key={item.href}>
+          <a href={resolveHref(item.href)} key={item.href}>
             {t.header.nav[item.key]}
           </a>
         ))}
       </nav>
 
       <div className={styles.actions}>
-        <a className={styles.budgetLink} href="#contacto">
+        <a className={styles.budgetLink} href={resolveHref("#contacto")}>
           {t.header.budget}
           <span aria-hidden="true">→</span>
         </a>

@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
+import CookieConsent from "@/components/CookieConsent/CookieConsent";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,7 +22,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <CookieConsent />
+        </LanguageProvider>
       </body>
     </html>
   );

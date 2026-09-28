@@ -1,32 +1,28 @@
 .header {
-  position: absolute;
-  z-index: 5;
-  top: clamp(28px, 4.2vh, 58px);
+  position: fixed;
+  z-index: 20;
+  top: clamp(16px, 2.4vh, 28px);
   left: clamp(28px, 3.6vw, 76px);
   right: clamp(24px, 3vw, 32px);
   display: grid;
   grid-template-columns: minmax(180px, 280px) 1fr auto;
   gap: clamp(24px, 4vw, 72px);
   align-items: center;
+  padding: 5px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(7, 24, 39, 0.428);
+  box-shadow: 0 18px 48px rgba(7, 24, 39, 0.18);
+  backdrop-filter: blur(18px);
   animation: headerReveal 700ms ease 520ms both;
 }
 
-.logoLink {
-  display: block;
-  width: clamp(170px, 13vw, 280px);
-}
-
-.logo {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(22px, 2.8vw, 46px);
+  gap: 20px;
   color: rgba(255, 255, 255, 0.84);
   font-size: clamp(0.72rem, 0.66rem + 0.24vw, 0.9rem);
   font-weight: 400;
@@ -50,27 +46,28 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: clamp(18px, 1.8vw, 28px);
+  gap:10px;
 }
 
 .budgetLink {
   display: inline-flex;
-  min-height: clamp(42px, 5vh, 54px);
+  min-height: clamp(40px, 5vh, 54px);
   align-items: center;
   justify-content: center;
   gap: 11px;
-  padding: 0 clamp(20px, 2vw, 28px);
+  padding: 6px 15px;
   border-radius: 999px;
   color: #ffffff;
   background: #438992;
-  font-size: clamp(0.78rem, 0.72rem + 0.26vw, 0.95rem);
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   line-height: 1;
   white-space: nowrap;
   transition:
     background 180ms ease,
     color 180ms ease,
     transform 180ms ease;
+  letter-spacing: 0.8px;
 }
 
 .budgetLink span {
