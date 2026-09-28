@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Viziona",
-  description: "Landing web de Viziona",
+  title: "Viziona - Agencia de marketing digital",
+  description: "Agencia de marketing digital especializada en SEO, SEM, redes sociales y desarrollo web. Impulsa tu negocio con estrategias efectivas y resultados medibles.",
 };
 
 export default function RootLayout({ children }) {
