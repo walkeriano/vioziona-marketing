@@ -4,11 +4,11 @@
   align-items: center;
   overflow: hidden;
   padding: clamp(34px, 6vh, 82px) clamp(24px, 7.5vw, 162px);
-  color: #ffffff;
+  color: #071827;
   background:
-    radial-gradient(circle at 3% 8%, rgba(52, 118, 126, 0.48) 0, rgba(52, 118, 126, 0.22) 21%, rgba(7, 24, 39, 0) 42%),
-    radial-gradient(circle at 97% 84%, rgba(65, 139, 146, 0.48) 0, rgba(65, 139, 146, 0.22) 20%, rgba(7, 24, 39, 0) 43%),
-    #071827;
+    radial-gradient(circle at 98% 8%, rgba(139, 217, 229, 0.22), rgba(139, 217, 229, 0) 20%),
+    radial-gradient(circle at 4% 96%, rgba(239, 146, 127, 0.16), rgba(239, 146, 127, 0) 24%),
+    #fbfaf7;
 }
 
 .content {
@@ -26,7 +26,7 @@
 
 .eyebrow {
   margin-bottom: clamp(24px, 3.2vh, 39px);
-  color: rgba(255, 255, 255, 0.88);
+  color: #438992;
   font-size: clamp(0.72rem, 0.66rem + 0.2vw, 0.86rem);
   font-weight: 500;
   line-height: 1;
@@ -36,7 +36,7 @@
 
 .title {
   display: grid;
-  color: #ffffff;
+  color: #071827;
   font-size: clamp(2.25rem, 3.9vw, 4rem);
   font-weight: 400;
   line-height: 0.86;
@@ -44,14 +44,14 @@
 }
 
 .title span:nth-child(n + 2) {
-  color: #ef927f;
+  color: #42bac4;
   font-weight: 800;
 }
 
 .intro {
   max-width: 780px;
   margin-top: clamp(32px, 5vh, 58px);
-  color: #ffffff;
+  color: #607781;
   font-size: clamp(1.05rem, 1.35vw, 1.55rem);
   font-weight: 700;
   line-height: 1.22;
@@ -84,9 +84,9 @@
 .field input,
 .messageField textarea {
   width: 100%;
-  border: 2px solid rgba(255, 255, 255, 0.18);
-  color: #ffffff;
-  background: rgba(7, 24, 39, 0.22);
+  border: 2px solid rgba(67, 137, 146, 0.14);
+  color: #071827;
+  background: rgba(255, 255, 255, 0.9);
   font: inherit;
   font-size: clamp(0.88rem, 0.95vw, 1.05rem);
   font-weight: 700;
@@ -109,7 +109,7 @@
   right: 29px;
   width: 32px;
   height: 32px;
-  color: rgba(255, 255, 255, 0.34);
+  color: rgba(66, 186, 196, 0.78);
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -123,14 +123,14 @@
 
 .field input::placeholder,
 .messageField textarea::placeholder {
-  color: rgba(255, 255, 255, 0.24);
+  color: rgba(7, 24, 39, 0.34);
 }
 
 .field input:focus,
 .messageField textarea:focus {
-  border-color: rgba(239, 146, 127, 0.72);
-  background: rgba(7, 24, 39, 0.42);
-  box-shadow: 0 0 0 4px rgba(239, 146, 127, 0.08);
+  border-color: rgba(66, 186, 196, 0.62);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(139, 217, 229, 0.16);
 }
 
 .actions {
@@ -157,7 +157,7 @@
   min-width: 188px;
   border: 0;
   color: #ffffff;
-  background: #ef927f;
+  background: #438992;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -175,9 +175,9 @@
 
 .whatsappButton {
   min-width: 188px;
-  border: 3px solid #ffffff;
-  color: #ffffff;
-  background: transparent;
+  border: 3px solid #ef927f;
+  color: #071827;
+  background: rgba(239, 146, 127, 0.08);
 }
 
 .submitButton,
@@ -198,8 +198,8 @@
 
 .whatsappButton:hover,
 .whatsappButton:focus-visible {
-  color: #071827;
-  background: #ffffff;
+  color: #ffffff;
+  background: #ef927f;
 }
 
 .successMessage,
@@ -218,18 +218,18 @@
 }
 
 .successMessage {
-  color: #dffcff;
+  color: #071827;
   background:
-    radial-gradient(circle at 10% 50%, rgba(139, 217, 229, 0.24), rgba(139, 217, 229, 0) 36%),
-    rgba(67, 137, 146, 0.24);
-  border: 1px solid rgba(139, 217, 229, 0.26);
+    radial-gradient(circle at 10% 50%, rgba(139, 217, 229, 0.2), rgba(139, 217, 229, 0) 36%),
+    rgba(227, 244, 239, 0.82);
+  border: 1px solid rgba(67, 137, 146, 0.18);
   box-shadow: 0 18px 46px rgba(67, 137, 146, 0.12);
 }
 
 .errorMessage {
-  color: #ffe6e1;
-  background: rgba(239, 146, 127, 0.16);
-  border: 1px solid rgba(239, 146, 127, 0.34);
+  color: #7a2b20;
+  background: rgba(239, 146, 127, 0.12);
+  border: 1px solid rgba(239, 146, 127, 0.28);
 }
 
 .successIcon {
@@ -306,15 +306,18 @@
 .contactCard {
   min-height: min(850px, calc(100vh - clamp(68px, 12vh, 164px)));
   padding: clamp(44px, 5.6vh, 63px) clamp(44px, 3.7vw, 70px);
-  border: 2px solid rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(67, 137, 146, 0.12);
   border-radius: 47px;
-  color: #ffffff;
-  background: rgba(7, 24, 39, 0.62);
+  color: #071827;
+  background:
+    linear-gradient(180deg, rgba(227, 244, 239, 0.72), rgba(255, 255, 255, 0.9) 42%),
+    #ffffff;
+  box-shadow: 0 24px 70px rgba(67, 137, 146, 0.1);
 }
 
 .cardLabel {
   margin-bottom: clamp(29px, 4.1vh, 48px);
-  color: #ffffff;
+  color: #438992;
   font-size: clamp(0.72rem, 0.66rem + 0.2vw, 0.86rem);
   font-weight: 600;
   line-height: 1;
@@ -323,7 +326,7 @@
 }
 
 .contactCard h3 {
-  color: #ffffff;
+  color: #071827;
   font-size: clamp(1.45rem, 2vw, 2.15rem);
   font-weight: 800;
   line-height: 0.98;
@@ -332,25 +335,47 @@
 
 .detailsList {
   display: grid;
-  gap: clamp(34px, 5vh, 56px);
+  gap: clamp(20px, 3vh, 30px);
   margin-top: clamp(48px, 7vh, 68px);
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: clamp(16px, 1.8vw, 22px);
+  border: 1px solid rgba(67, 137, 146, 0.1);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.detailIcon {
+  display: grid;
+  width: clamp(44px, 3.5vw, 54px);
+  height: clamp(44px, 3.5vw, 54px);
+  place-items: center;
+  border-radius: 50%;
+  color: #071827;
+  background: #e3f4ef;
+  font-size: clamp(1rem, 0.92rem + 0.24vw, 1.18rem);
 }
 
 .detail dt {
   color: #ef927f;
   font-size: clamp(0.72rem, 0.66rem + 0.2vw, 0.86rem);
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1;
-  letter-spacing: 2.5px;
+  letter-spacing: 1.7px;
   text-transform: uppercase;
 }
 
 .detail dd {
-  margin-top: 20px;
-  color: #36848c;
+  margin-top: 12px;
+  color: #438992;
   font-size: clamp(0.88rem, 0.95vw, 1.05rem);
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .srOnly {
@@ -406,7 +431,7 @@
   }
 
   .detailsList {
-    gap: 34px;
+    gap: 18px;
     margin-top: 46px;
   }
 }
@@ -470,7 +495,7 @@
   }
 
   .detailsList {
-    gap: 38px;
+    gap: 18px;
     margin-top: 50px;
   }
 }

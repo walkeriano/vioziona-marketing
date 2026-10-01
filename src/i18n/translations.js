@@ -25,45 +25,93 @@ export const translations = {
       imageAlt: "Mockup de presencia digital de Viziona",
     },
     nosotros: {
-      label: "Un aliado digital para tu negocio",
-      title: ["Tu marca merece", "una", "presencia", "profesional."],
-      description:
-        "Ayudamos a emprendedores, autónomos y pymes a construir una presencia digital clara y coherente. Estrategia, creatividad y cercanía para crecer sin tecnicismos innecesarios",
-      pillarsLabel: "Nuestro enfoque",
-      pillars: ["Estrategia", "Creatividad", "Ejecución", "Medición"],
-      quote: "“Hacemos visible tu negocio y convertimos tu presencia digital en oportunidades”",
-      imageAlt: "Sol y Karina, fundadoras de Viziona",
+      title: ["Detrás de cada negocio", "hay una historia.", "En Viziona", "hacemos que se vea."],
+      paragraphs: [
+        "Creemos que una buena presencia digital no consiste solamente en publicar contenido. Se trata de comunicar quién eres, conectar con las personas adecuadas y transformar esa conexión en nuevas oportunidades.",
+        "Por eso escuchamos, analizamos y diseñamos una estrategia digital que representa la esencia de tu negocio y te ayuda a avanzar con claridad, confianza y propósito.",
+      ],
+      pillarsLabel: "Nuestra forma de trabajar",
+      pillars: [
+        {
+          title: "Escuchamos tu historia",
+          description: "Comprendemos tu marca, tus objetivos y el público al que quieres llegar.",
+        },
+        {
+          title: "Creamos con estrategia",
+          description: "Cada contenido y cada acción tienen una intención definida.",
+        },
+        {
+          title: "Conectamos con personas",
+          description: "Construimos una comunicación cercana que genera confianza.",
+        },
+        {
+          title: "Impulsamos tu crecimiento",
+          description: "Te acompañamos para que tu presencia digital evolucione con tu negocio.",
+        },
+      ],
+      quote: "“No buscamos que tu marca solamente esté presente. Queremos que conecte, destaque y crezca.”",
       partnerImages: ["Sol, cofundadora de Viziona", "Karina, cofundadora de Viziona"],
     },
     servicios: {
       label: "Servicios Digitales",
       title: ["Marketing digital", "sin complicaciones"],
-      proposal: "Solicita tu propuesta",
-      othersAria: "Otros servicios digitales",
-      featured: [
+      intro:
+        "No necesitas estar en todas partes. Necesitas estar donde están tus clientes y hacerlo bien. Diseñamos una estrategia con los servicios que realmente necesita tu negocio.",
+      cardsAria: "Servicios digitales",
+      ctaAria: "Solicitar información sobre",
+      items: [
         {
-          eyebrow: "Prioritario",
           title: "Gestión de Redes Sociales",
-          description: "Estrategía, calendario, diseño, copy, reels, comunidad y optimización.",
-          alt: "Collage de contenido para redes sociales con un teléfono, iconos y megáfono",
+          description: "Convertimos tus redes en una presencia profesional, coherente y estratégica.",
+          features: ["Estrategia", "Calendario", "Diseño", "Copy", "Reels", "Publicación", "Optimización"],
+          cta: "Quiero mejorar mis redes",
+          alt: "Vista de un perfil social de Viziona en un teléfono",
         },
         {
           title: "Desarrollo Web",
-          description: "Landing pages modernas, adaptables a móvil y orientadas al contacto.",
-          alt: "Diseño web responsive mostrado en ordenador, tablet y móvil",
+          description:
+            "Creamos landing pages y webs profesionales, rápidas y adaptadas a móvil, diseñadas para convertir visitas en oportunidades.",
+          features: ["Landing pages", "Web corporativa", "UX/UI", "Responsive", "Optimización"],
+          cta: "Necesito una web",
+          alt: "Diseño web mostrado en un portátil",
+        },
+        {
+          title: "SEO y Posicionamiento",
+          description:
+            "Trabajamos para que tu negocio aparezca cuando tus potenciales clientes buscan servicios como el tuyo.",
+          features: ["SEO", "SEO local", "Contenidos", "Google Business", "Optimización"],
+          cta: "Quiero que me encuentren",
+          alt: "Panel digital de posicionamiento y búsqueda",
+        },
+        {
+          title: "Publicidad Digital",
+          description:
+            "Campañas estratégicas para llegar a las personas adecuadas y transformar tu inversión en oportunidades.",
+          features: ["Meta Ads", "Google Ads", "Campañas", "Optimización", "Medición"],
+          cta: "Quiero atraer clientes",
+          alt: "Panel de publicidad digital con métricas",
+        },
+        {
+          title: "Branding & Diseño",
+          description:
+            "Construimos una identidad visual profesional, coherente y reconocible para que tu negocio comunique el valor que realmente tiene.",
+          features: ["Identidad visual", "Diseño gráfico", "Contenido", "Creatividades", "Aplicaciones de marca"],
+          cta: "Quiero mejorar mi imagen",
+          alt: "Materiales de identidad visual de Viziona",
         },
       ],
-      compact: [
-        { title: "SEO y SEM", description: "Visibilidad" },
-        { title: "Diseño gráfico", description: "Identidad" },
-        { title: "Automatización IA", description: "Eficiencia" },
-      ],
+      smart: {
+        title: "+ Soluciones inteligentes para ahorrar tiempo",
+        description:
+          "Incorporamos automatización e inteligencia artificial cuando realmente aportan valor a tu negocio, simplificando tareas y procesos digitales.",
+        cta: "Quiero saber más",
+      },
     },
     suscripciones: {
-      eyebrow: "Suscripciones",
-      title: ["Encuentra el plan", "para tu marca"],
-      intro: "Desde tus primeros pasos en redes hasta una presencia digital completa. ",
-      introStrong: "Elige el nivel de gestión que mejor se adapta a tu negocio.",
+      eyebrow: "Soluciones adaptadas a tu negocio",
+      title: ["Empieza con lo que necesitas.", "Crece cuando estés preparado."],
+      intro:
+        "No todos los negocios necesitan lo mismo. Por eso diseñamos diferentes niveles de servicio para acompañarte según tus objetivos y tu momento.",
       cardsAria: "Planes de suscripción",
       idealLabel: "Ideal para:",
       plans: [
@@ -120,7 +168,8 @@ export const translations = {
         },
       ],
       addOns: {
-        eyebrow: "Servicios adicionales · Precio a consultar",
+        eyebrow: "Servicios adicionales",
+        pricing: "Servicios adicionales · Precio a consultar",
         title: "Potencia tu estrategia",
         intro: "Complementa tu plan con servicios especializados.",
         items: [
@@ -149,45 +198,43 @@ export const translations = {
       },
     },
     metodo: {
-      eyebrow: "Por qué Viziona",
-      title: ["Una forma clara", "de convertir ideas", "en", "acciones digitales."],
+      eyebrow: "Antes de empezar",
+      title: ["¿Te identificas con alguna", "de estas situaciones?"],
       processLabel: "Nuestro proceso",
+      processTitle: ["De la idea a los", "resultados."],
       processAria: "Nuestro proceso",
-      proposal: "Solicita tu propuesta",
-      principles: [
+      proposal: "Cuéntanos tu proyecto",
+      situations: [
         {
-          title: "Estrategia",
-          description: "Partimos de tus objetivos, no de fórmulas genéricas.",
+          description: "No tengo tiempo para gestionar mis redes.",
         },
         {
-          title: "Cercanía",
-          description: "Entendemos tu negocio y hablamos claro.",
+          description: "Mi negocio está en internet, pero casi nadie me encuentra.",
         },
         {
-          title: "Transparencia",
-          description: "Sabes qué hacemos, por qué y para qué.",
+          description: "Mi imagen digital no refleja la calidad de mi negocio.",
         },
         {
-          title: "Mejora continua",
-          description: "Medimos, aprendemos y optimizamos.",
+          description: "Hago marketing, pero no sé si realmente está funcionando.",
         },
       ],
+      claim: ["No necesitas hacer más marketing.", "Necesitas una estrategia más clara."],
       process: [
         {
-          title: "Te escuchamos",
-          description: "Negocio, retos y objetivos.",
+          title: "Nos conocemos",
+          description: "Entendemos tu negocio, tus clientes, tus retos y tus objetivos.",
         },
         {
-          title: "Creamos la estrategia",
-          description: "Acciones y prioridades.",
+          title: "Diseñamos el camino",
+          description: "Seleccionamos las acciones y canales que realmente necesitas.",
         },
         {
-          title: "Ejecutamos",
-          description: "Diseño, contenido y campañas.",
+          title: "Lo hacemos realidad",
+          description: "Diseñamos, creamos, publicamos y ejecutamos la estrategia.",
         },
         {
           title: "Medimos y mejoramos",
-          description: "Datos para optimizar",
+          description: "Analizamos resultados para entender qué funciona y qué podemos optimizar.",
         },
       ],
     },
@@ -200,6 +247,8 @@ export const translations = {
         companyPlaceholder: "Nombre de empresa...",
         phone: "Teléfono",
         phonePlaceholder: "Teléfono...",
+        email: "Email",
+        emailPlaceholder: "Email...",
         project: "Cuéntanos tu proyecto",
         projectPlaceholder: "Cuéntanos tu proyecto...",
         submit: "Enviar",
@@ -284,45 +333,93 @@ export const translations = {
       imageAlt: "Mockup de presència digital de Viziona",
     },
     nosotros: {
-      label: "Un aliat digital per al teu negoci",
-      title: ["La teva marca mereix", "una", "presència", "professional."],
-      description:
-        "Ajudem emprenedors, autònoms i pimes a construir una presència digital clara i coherent. Estratègia, creativitat i proximitat per créixer sense tecnicismes innecessaris",
-      pillarsLabel: "El nostre enfocament",
-      pillars: ["Estratègia", "Creativitat", "Execució", "Mesura"],
-      quote: "“Fem visible el teu negoci i convertim la teva presència digital en oportunitats”",
-      imageAlt: "Sol i Karina, fundadores de Viziona",
+      title: ["Darrere de cada negoci", "hi ha una història.", "A Viziona", "fem que es vegi."],
+      paragraphs: [
+        "Creiem que una bona presència digital no consisteix només a publicar contingut. Es tracta de comunicar qui ets, connectar amb les persones adequades i transformar aquesta connexió en noves oportunitats.",
+        "Per això escoltem, analitzem i dissenyem una estratègia digital que representa l'essència del teu negoci i t'ajuda a avançar amb claredat, confiança i propòsit.",
+      ],
+      pillarsLabel: "La nostra manera de treballar",
+      pillars: [
+        {
+          title: "Escoltem la teva història",
+          description: "Comprenem la teva marca, els teus objectius i el públic al qual vols arribar.",
+        },
+        {
+          title: "Creem amb estratègia",
+          description: "Cada contingut i cada acció tenen una intenció definida.",
+        },
+        {
+          title: "Connectem amb persones",
+          description: "Construïm una comunicació propera que genera confiança.",
+        },
+        {
+          title: "Impulsem el teu creixement",
+          description: "T'acompanyem perquè la teva presència digital evolucioni amb el teu negoci.",
+        },
+      ],
+      quote: "“No busquem que la teva marca només sigui present. Volem que connecti, destaqui i creixi.”",
       partnerImages: ["Sol, cofundadora de Viziona", "Karina, cofundadora de Viziona"],
     },
     servicios: {
       label: "Serveis digitals",
       title: ["Màrqueting digital", "sense complicacions"],
-      proposal: "Sol·licita la teva proposta",
-      othersAria: "Altres serveis digitals",
-      featured: [
+      intro:
+        "No necessites ser a tot arreu. Necessites ser on són els teus clients i fer-ho bé. Dissenyem una estratègia amb els serveis que realment necessita el teu negoci.",
+      cardsAria: "Serveis digitals",
+      ctaAria: "Sol·licitar informació sobre",
+      items: [
         {
-          eyebrow: "Prioritari",
           title: "Gestió de Xarxes Socials",
-          description: "Estratègia, calendari, disseny, copy, reels, comunitat i optimització.",
-          alt: "Collage de contingut per a xarxes socials amb un telèfon, icones i megàfon",
+          description: "Convertim les teves xarxes en una presència professional, coherent i estratègica.",
+          features: ["Estratègia", "Calendari", "Disseny", "Copy", "Reels", "Publicació", "Optimització"],
+          cta: "Vull millorar les meves xarxes",
+          alt: "Vista d'un perfil social de Viziona en un telèfon",
         },
         {
-          title: "Desenvolupament Web",
-          description: "Landing pages modernes, adaptables a mòbil i orientades al contacte.",
-          alt: "Disseny web responsive mostrat en ordinador, tauleta i mòbil",
+          title: "Disseny i Desenvolupament Web",
+          description:
+            "Creem landing pages i webs professionals, ràpides i adaptades a mòbil, dissenyades per convertir visites en oportunitats.",
+          features: ["Landing pages", "Web corporativa", "UX/UI", "Responsive", "Optimització"],
+          cta: "Necessito una web",
+          alt: "Disseny web mostrat en un portàtil",
+        },
+        {
+          title: "SEO i Posicionament",
+          description:
+            "Treballem perquè el teu negoci aparegui quan els teus potencials clients busquen serveis com el teu.",
+          features: ["SEO", "SEO local", "Continguts", "Google Business", "Optimització"],
+          cta: "Vull que em trobin",
+          alt: "Panell digital de posicionament i cerca",
+        },
+        {
+          title: "Publicitat Digital",
+          description:
+            "Campanyes estratègiques per arribar a les persones adequades i transformar la teva inversió en oportunitats.",
+          features: ["Meta Ads", "Google Ads", "Campanyes", "Optimització", "Mesura"],
+          cta: "Vull atreure clients",
+          alt: "Panell de publicitat digital amb mètriques",
+        },
+        {
+          title: "Branding & Disseny",
+          description:
+            "Construïm una identitat visual professional, coherent i reconeixible perquè el teu negoci comuniqui el valor que realment té.",
+          features: ["Identitat visual", "Disseny gràfic", "Contingut", "Creativitats", "Aplicacions de marca"],
+          cta: "Vull millorar la meva imatge",
+          alt: "Materials d'identitat visual de Viziona",
         },
       ],
-      compact: [
-        { title: "SEO i SEM", description: "Visibilitat" },
-        { title: "Disseny gràfic", description: "Identitat" },
-        { title: "Automatització IA", description: "Eficiència" },
-      ],
+      smart: {
+        title: "+ Solucions intel·ligents per estalviar temps",
+        description:
+          "Incorporem automatització i intel·ligència artificial quan realment aporten valor al teu negoci, simplificant tasques i processos digitals.",
+        cta: "Vull saber-ne més",
+      },
     },
     suscripciones: {
-      eyebrow: "Subscripcions",
-      title: ["Troba el pla", "per a la teva marca"],
-      intro: "Des dels teus primers passos a xarxes fins a una presència digital completa. ",
-      introStrong: "Tria el nivell de gestió que millor s'adapta al teu negoci.",
+      eyebrow: "Solucions adaptades al teu negoci",
+      title: ["Comença amb el que necessites.", "Creix quan estiguis preparat."],
+      intro:
+        "No tots els negocis necessiten el mateix. Per això dissenyem diferents nivells de servei per acompanyar-te segons els teus objectius i el teu moment.",
       cardsAria: "Plans de subscripció",
       idealLabel: "Ideal per a:",
       plans: [
@@ -379,7 +476,8 @@ export const translations = {
         },
       ],
       addOns: {
-        eyebrow: "Serveis addicionals · Preu a consultar",
+        eyebrow: "Serveis addicionals",
+        pricing: "Serveis addicionals · Preu a consultar",
         title: "Potencia la teva estratègia",
         intro: "Complementa el teu pla amb serveis especialitzats.",
         items: [
@@ -408,45 +506,43 @@ export const translations = {
       },
     },
     metodo: {
-      eyebrow: "Per què Viziona",
-      title: ["Una forma clara", "de convertir idees", "en", "accions digitals."],
+      eyebrow: "Abans de començar",
+      title: ["T'identifiques amb alguna", "d'aquestes situacions?"],
       processLabel: "El nostre procés",
+      processTitle: ["De la idea als", "resultats."],
       processAria: "El nostre procés",
-      proposal: "Sol·licita la teva proposta",
-      principles: [
+      proposal: "Explica'ns el teu projecte",
+      situations: [
         {
-          title: "Estratègia",
-          description: "Partim dels teus objectius, no de fórmules genèriques.",
+          description: "No tinc temps per gestionar les meves xarxes.",
         },
         {
-          title: "Proximitat",
-          description: "Entenem el teu negoci i parlem clar.",
+          description: "El meu negoci és a internet, però gairebé ningú em troba.",
         },
         {
-          title: "Transparència",
-          description: "Saps què fem, per què i per a què.",
+          description: "La meva imatge digital no reflecteix la qualitat del meu negoci.",
         },
         {
-          title: "Millora contínua",
-          description: "Mesurem, aprenem i optimitzem.",
+          description: "Faig màrqueting, però no sé si realment està funcionant.",
         },
       ],
+      claim: ["No necessites fer més màrqueting.", "Necessites una estratègia més clara."],
       process: [
         {
-          title: "T'escoltem",
-          description: "Negoci, reptes i objectius.",
+          title: "Ens coneixem",
+          description: "Entenem el teu negoci, els teus clients, els teus reptes i els teus objectius.",
         },
         {
-          title: "Creem l'estratègia",
-          description: "Accions i prioritats.",
+          title: "Dissenyem el camí",
+          description: "Seleccionem les accions i canals que realment necessites.",
         },
         {
-          title: "Executem",
-          description: "Disseny, contingut i campanyes.",
+          title: "Ho fem realitat",
+          description: "Dissenyem, creem, publiquem i executem l'estratègia.",
         },
         {
           title: "Mesurem i millorem",
-          description: "Dades per optimitzar",
+          description: "Analitzem resultats per entendre què funciona i què podem optimitzar.",
         },
       ],
     },
@@ -459,6 +555,8 @@ export const translations = {
         companyPlaceholder: "Nom de l'empresa...",
         phone: "Telèfon",
         phonePlaceholder: "Telèfon...",
+        email: "Email",
+        emailPlaceholder: "Email...",
         project: "Explica'ns el teu projecte",
         projectPlaceholder: "Explica'ns el teu projecte...",
         submit: "Enviar",

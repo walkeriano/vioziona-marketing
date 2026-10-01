@@ -31,10 +31,9 @@ export default function Inicio() {
             </a>
           </div>
         </div>
-
         <div className={styles.imageContainer}>
           <Image
-            src="/bg-oficial.png"
+            src="/bg-hero-oficial.png"
             alt={t.inicio.imageAlt}
             width={1672}
             height={941}
@@ -43,7 +42,6 @@ export default function Inicio() {
           />
         </div>
       </div>
-
       <a className={styles.scrollHint} href="#nosotros">
         {t.inicio.scrollHint}
         <span aria-hidden="true">↓</span>

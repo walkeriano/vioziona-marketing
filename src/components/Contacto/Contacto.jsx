@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
   faCircleUser,
+  faClock,
+  faEnvelope,
+  faLocationDot,
   faPaperPlane,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
@@ -12,6 +15,7 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 import styles from "./Contacto.module.css";
 
 const formspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+const detailIcons = [faPhoneVolume, faEnvelope, faLocationDot, faClock];
 
 export default function Contacto() {
   const { t } = useLanguage();
@@ -90,6 +94,12 @@ export default function Contacto() {
               <FontAwesomeIcon icon={faPhoneVolume} aria-hidden="true" />
             </label>
 
+            <label className={styles.field}>
+              <span className={styles.srOnly}>{t.contacto.form.email}</span>
+              <input type="email" name="email" placeholder={t.contacto.form.emailPlaceholder} required />
+              <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
+            </label>
+
             <label className={styles.messageField}>
               <span className={styles.srOnly}>{t.contacto.form.project}</span>
               <textarea name="proyecto" placeholder={t.contacto.form.projectPlaceholder} rows="4" required />
@@ -129,10 +139,15 @@ export default function Contacto() {
           </h3>
 
           <dl className={styles.detailsList}>
-            {t.contacto.details.map((item) => (
+            {t.contacto.details.map((item, index) => (
               <div className={styles.detail} key={item.label}>
-                <dt>{item.label}</dt>
-                <dd>{item.value}</dd>
+                <span className={styles.detailIcon} aria-hidden="true">
+                  <FontAwesomeIcon icon={detailIcons[index]} />
+                </span>
+                <div>
+                  <dt>{item.label}</dt>
+                  <dd>{item.value}</dd>
+                </div>
               </div>
             ))}
           </dl>

@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <a className={styles.logoLink} href={resolveHref("#inicio")} aria-label="Viziona">
-        <Image src="/logo.png" alt="Viziona" width={157} height={32} className={styles.logo} priority />
+        <Image src="/logo-oficial.png" alt="Viziona" width={150} height={35} className={styles.logo} priority />
       </a>
 
       <nav className={styles.nav} aria-label={t.header.aria.main}>

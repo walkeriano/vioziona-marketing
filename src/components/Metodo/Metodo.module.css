@@ -1,201 +1,235 @@
 .section {
-  display: grid;
-  min-height: 100vh;
-  align-items: center;
+  position: relative;
   overflow: hidden;
-  padding: clamp(32px, 6vh, 72px) clamp(24px, 5.3vw, 112px);
-  color: #071726;
-  background: #e9e9e9;
+  padding: clamp(68px, 6.2vw, 96px) clamp(24px, 4.2vw, 78px);
+  color: #f8fbfc;
+  background:
+    radial-gradient(circle at 1% 8%, rgba(67, 137, 146, 0.48), rgba(67, 137, 146, 0.2) 18%, rgba(7, 24, 39, 0) 38%),
+    radial-gradient(circle at 92% 86%, rgba(66, 186, 196, 0.32), rgba(66, 186, 196, 0.12) 18%, rgba(7, 24, 39, 0) 40%),
+    radial-gradient(circle at 52% 22%, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 32%),
+    linear-gradient(135deg, #03111b 0%, #052235 48%, #071827 100%);
 }
 
 .content {
+  position: relative;
   display: grid;
-  width: min(1740px, 100%);
+  width: min(1900px, 100%);
   margin: 0 auto;
-  grid-template-columns: minmax(0, 1fr) minmax(390px, 637px);
-  gap: clamp(34px, 4.1vw, 76px);
-  align-items: center;
+  grid-template-columns: minmax(0, 0.84fr) 1px minmax(0, 1.1fr);
+  gap: clamp(34px, 3.8vw, 68px);
+  align-items: stretch;
+  min-height: clamp(620px, 42vw, 760px);
 }
 
-.leftColumn {
+.content::before {
+  grid-column: 2;
+  grid-row: 1;
+  background: rgba(255, 255, 255, 0.34);
+  content: "";
+}
+
+.situationsPanel,
+.processPanel {
+  position: relative;
+  z-index: 1;
   min-width: 0;
 }
 
-.heading {
-  margin-bottom: clamp(32px, 5vh, 56px);
+.situationsPanel {
+  display: grid;
+  align-content: start;
+  padding-top: clamp(12px, 1.4vw, 24px);
 }
 
 .eyebrow {
-  margin-bottom: clamp(16px, 2.5vh, 28px);
-  color: #3f3f3f;
-  font-size: clamp(0.72rem, 0.66rem + 0.2vw, 0.86rem);
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(0.66rem, 0.62rem + 0.12vw, 0.78rem);
+  font-weight: 900;
   line-height: 1;
-  letter-spacing: 2.5px;
+  letter-spacing: 2.8px;
   text-transform: uppercase;
 }
 
-.title {
-  color: #071726;
-  font-size: clamp(2.2rem, 3.8vw, 3.9rem);
+.title,
+.processTitle,
+.claim {
+  color: #ffffff;
+  font-size: clamp(1.9rem, 3vw, 3.42rem);
   font-weight: 800;
-  line-height: 0.91;
+  line-height: 0.96;
   letter-spacing: 0;
 }
 
-.title span {
-  color: #ef927f;
-}
-
-.cardGrid {
+.title {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(18px, 2.8vh, 34px) clamp(20px, 2.1vw, 36px);
+  margin-top: clamp(12px, 1.4vw, 18px);
 }
 
-.principleCard {
-  min-height: clamp(178px, 21vh, 272px);
-  padding: clamp(28px, 4.1vh, 56px) clamp(34px, 3.2vw, 68px);
-  border: 1.5px solid #a9a9a9;
-  border-radius: 43px;
-  background: #ffffff;
-}
-
-.cardNumber {
-  display: block;
-  margin-bottom: clamp(16px, 2.4vh, 27px);
-  color: #ef927f;
-  font-size: clamp(0.8rem, 0.82vw, 0.98rem);
+.title strong,
+.processTitle strong,
+.claim strong {
+  color: #42bac4;
   font-weight: 800;
-  line-height: 1;
 }
 
-.principleCard h3 {
-  color: #36848c;
-  font-size: clamp(1.05rem, 1.35vw, 1.55rem);
-  font-weight: 800;
-  line-height: 1;
+.situationsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(10px, 0.9vw, 14px);
+  margin-top: clamp(32px, 3.4vw, 50px);
 }
 
-.principleCard p {
-  max-width: 420px;
-  margin-top: clamp(12px, 2vh, 21px);
-  color: #8e8e8e;
-  font-size: clamp(0.95rem, 1.05vw, 1.22rem);
-  font-weight: 600;
-  line-height: 1.17;
+.situationCard {
+  min-height: clamp(150px, 12.4vw, 196px);
+  padding: clamp(18px, 1.55vw, 24px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: clamp(15px, 1.4vw, 22px);
+  background: rgba(3, 17, 27, 0.28);
+  backdrop-filter: blur(2px);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.situationCard:hover,
+.situationCard:focus-within {
+  border-color: rgba(139, 217, 229, 0.36);
+  background: rgba(4, 22, 34, 0.48);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18);
+  transform: translateY(-3px);
+}
+
+.situationIcon {
+  display: grid;
+  width: clamp(46px, 3.55vw, 58px);
+  height: clamp(46px, 3.55vw, 58px);
+  place-items: center;
+  border-radius: 50%;
+  color: #dffcff;
+  background: rgba(67, 137, 146, 0.46);
+  font-size: clamp(1rem, 0.9rem + 0.42vw, 1.38rem);
+}
+
+.situationCard p {
+  margin-top: clamp(16px, 1.5vw, 22px);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(0.82rem, 0.76rem + 0.14vw, 0.94rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.claim {
+  display: grid;
+  margin-top: clamp(50px, 5.2vw, 78px);
+  padding-left: clamp(58px, 5.8vw, 104px);
+  font-size: clamp(1.6rem, 2.08vw, 2.62rem);
+  line-height: 1.04;
 }
 
 .processPanel {
-  --marker-size: clamp(64px, 9.2vh, 90px);
-
-  display: flex;
-  height: min(820px, calc(100vh - clamp(64px, 12vh, 144px)));
-  min-height: 0;
-  flex-direction: column;
-  padding: clamp(34px, 5.4vh, 86px) clamp(34px, 3vw, 62px) clamp(20px, 3vh, 29px);
-  border-radius: 43px;
-  color: #f8fafb;
-  background: #071827;
+  display: grid;
+  align-content: start;
+  padding-top: clamp(12px, 1.4vw, 24px);
 }
 
-.processLabel {
-  margin-left: 31px;
-  color: #f4f6f8;
-  font-size: clamp(0.72rem, 0.66rem + 0.2vw, 0.86rem);
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
+.processTitle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.28em;
+  margin-top: clamp(12px, 1.4vw, 18px);
 }
 
 .timeline {
-  position: relative;
   display: grid;
-  flex: 1;
-  gap: clamp(22px, 4.2vh, 60px);
-  align-content: center;
-  margin: clamp(34px, 5.4vh, 70px) 0 clamp(28px, 4.4vh, 54px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 46px);
+  margin: clamp(44px, 4.4vw, 64px) 0 0;
   padding: 0;
   list-style: none;
 }
 
-.timeline::before {
+.step {
+  position: relative;
+  min-width: 0;
+}
+
+.step:not(:last-child)::after {
   position: absolute;
-  top: var(--marker-size);
-  bottom: var(--marker-size);
-  left: calc(var(--marker-size) / 2);
-  width: 2px;
-  background: #9f9f9f;
+  top: clamp(27px, 2.65vw, 35px);
+  left: calc(clamp(54px, 5vw, 70px) + clamp(18px, 1.8vw, 34px));
+  width: clamp(42px, 4.2vw, 82px);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.44);
   content: "";
 }
 
-.step {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: var(--marker-size) 1fr;
-  gap: 28px;
-  align-items: center;
+.step:not(:last-child)::before {
+  position: absolute;
+  top: calc(clamp(27px, 2.65vw, 35px) - 5px);
+  left: calc(clamp(54px, 5vw, 70px) + clamp(18px, 1.8vw, 34px) + clamp(42px, 4.2vw, 82px));
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid rgba(255, 255, 255, 0.44);
+  border-right: 2px solid rgba(255, 255, 255, 0.44);
+  transform: rotate(45deg);
+  content: "";
 }
 
-.marker,
-.activeMarker {
+.marker {
   display: grid;
-  width: var(--marker-size);
-  height: var(--marker-size);
+  width: clamp(54px, 5vw, 70px);
+  height: clamp(54px, 5vw, 70px);
   place-items: center;
+  border: 1px solid rgba(139, 217, 229, 0.16);
   border-radius: 50%;
-  color: #ffffff;
-  background: #9a9a9a;
-  font-size: clamp(1.85rem, 3.8vh, 2.65rem);
-  font-weight: 800;
+  color: #dffcff;
+  background: rgba(67, 137, 146, 0.56);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+  font-size: clamp(1rem, 0.9rem + 0.38vw, 1.34rem);
+  font-weight: 900;
   line-height: 1;
 }
 
-.activeMarker {
-  background: #ef927f;
+.stepText {
+  margin-top: clamp(16px, 1.8vw, 24px);
 }
 
-.stepText h3 {
+.stepText h4 {
   color: #ffffff;
-  font-size: clamp(1rem, 1.18vw, 1.42rem);
-  font-weight: 800;
-  line-height: 1.05;
+  font-size: clamp(0.86rem, 0.8rem + 0.16vw, 1rem);
+  font-weight: 900;
+  line-height: 1.1;
 }
 
 .stepText p {
-  margin-top: clamp(10px, 1.8vh, 17px);
-  color: rgba(255, 255, 255, 0.5);
-  font-size: clamp(0.86rem, 0.92vw, 1.05rem);
-  font-weight: 500;
-  line-height: 1.05;
+  margin-top: 11px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(0.76rem, 0.72rem + 0.14vw, 0.88rem);
+  font-weight: 650;
+  line-height: 1.34;
 }
 
 .cta {
-  display: flex;
-  width: 100%;
-  min-height: clamp(64px, 8vh, 81px);
+  display: inline-flex;
+  width: min(324px, 100%);
+  min-height: 52px;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  border: 3px solid #f8fafb;
+  gap: 12px;
+  margin-top: clamp(32px, 4vw, 52px);
+  padding: 0 24px;
   border-radius: 999px;
   color: #ffffff;
-  font-size: clamp(0.95rem, 1.05vw, 1.18rem);
+  background: #42bac4;
+  font-size: clamp(0.84rem, 0.8rem + 0.16vw, 0.96rem);
   font-weight: 800;
   line-height: 1;
   transition:
-    color 180ms ease,
     background 180ms ease,
+    color 180ms ease,
     transform 180ms ease;
-}
-
-.cta span {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 0.55;
-  transform: translateY(-1px);
 }
 
 .cta:hover,
@@ -206,151 +240,61 @@
 }
 
 @media (max-width: 1180px) {
-  .section {
-    min-height: auto;
-  }
-
   .content {
     grid-template-columns: 1fr;
-    align-items: start;
   }
 
-  .processPanel {
-    height: auto;
-    min-height: 0;
+  .content::before {
+    display: none;
   }
 
-  .timeline {
-    gap: 38px;
-  }
-}
-
-@media (min-width: 1181px) and (max-height: 760px) {
-  .title {
-    font-size: clamp(2rem, 6.2vh, 3.2rem);
-  }
-
-  .principleCard {
-    min-height: 160px;
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
-
-  .processPanel {
-    --marker-size: clamp(58px, 8.4vh, 68px);
-
-    height: calc(100vh - 56px);
+  .situationsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .timeline {
-    gap: 18px;
-    margin-top: 26px;
-    margin-bottom: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+  }
+
+  .step::before,
+  .step::after {
+    display: none;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 720px) {
   .section {
-    padding: 74px 16px;
+    padding: 72px 16px;
   }
 
-  .heading {
-    margin-bottom: 38px;
+  .title,
+  .processTitle {
+    font-size: clamp(2rem, 8.6vw, 3rem);
   }
 
-  .eyebrow {
-    margin-bottom: 18px;
-    letter-spacing: 1.8px;
-  }
-
-  .title {
-    font-size: clamp(2rem, 8.8vw, 3rem);
-    line-height: 0.96;
-  }
-
-  .cardGrid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .principleCard {
-    min-height: 0;
-    padding: 34px 32px;
-    border-radius: 30px;
-  }
-
-  .cardNumber {
-    margin-bottom: 20px;
-  }
-
-  .principleCard p {
-    max-width: none;
-  }
-
-  .processPanel {
-    padding: 42px 28px 24px;
-    border-radius: 34px;
-  }
-
-  .processLabel {
-    margin-left: 0;
-    text-align: center;
-  }
-
+  .situationsGrid,
   .timeline {
-    gap: 32px;
-    margin: 46px 0 40px;
+    grid-template-columns: 1fr;
   }
 
-  .timeline::before {
-    top: 62px;
-    bottom: 70px;
-    left: 31px;
+  .situationCard {
+    min-height: 0;
   }
 
-  .step {
-    grid-template-columns: 62px 1fr;
-    gap: 18px;
-  }
-
-  .marker,
-  .activeMarker {
-    width: 62px;
-    height: 62px;
-    font-size: 1.8rem;
-  }
-
-  .stepText p {
-    margin-top: 10px;
+  .claim {
+    font-size: clamp(1.55rem, 7vw, 2.3rem);
   }
 
   .cta {
-    min-height: 66px;
-    gap: 16px;
-    border-width: 2px;
-    font-size: clamp(0.9rem, 3.6vw, 1rem);
-  }
-
-  .cta span {
-    font-size: 2rem;
+    width: 100%;
   }
 }
 
-@media (max-width: 420px) {
-  .title {
-    font-size: clamp(2.1rem, 10vw, 2.75rem);
-  }
-
-  .processPanel {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
-  .stepText h3 {
-    font-size: clamp(1rem, 4.5vw, 1.2rem);
-  }
-
-  .stepText p {
-    font-size: clamp(0.88rem, 4vw, 1rem);
+@media (prefers-reduced-motion: reduce) {
+  .situationCard,
+  .cta {
+    transition: none;
+    transform: none;
   }
 }

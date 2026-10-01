@@ -3,32 +3,49 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowRight,
   faBullhorn,
   faChartLine,
+  faCheck,
   faCode,
+  faGear,
   faPalette,
-  faRobot,
+  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import styles from "./Servicios.module.css";
 
-const featuredServices = [
+const serviceVisuals = [
   {
-    image: "/services/social-media.png",
-    imageHeight: 287,
+    image: "/service-1.png",
+    width: 797,
+    height: 287,
+    icon: faPaperPlane,
+  },
+  {
+    image: "/service-2.png",
+    width: 797,
+    height: 285,
+    icon: faCode,
+  },
+  {
+    image: "/service-3.png",
+    width: 860,
+    height: 832,
+    icon: faChartLine,
+  },
+  {
+    image: "/service-4.png",
+    width: 797,
+    height: 287,
     icon: faBullhorn,
   },
   {
-    image: "/services/web-development.png",
-    imageHeight: 285,
-    icon: faCode,
+    image: "/service-5.png",
+    width: 953,
+    height: 197,
+    icon: faPalette,
   },
-];
-
-const compactServices = [
-  { icon: faChartLine },
-  { icon: faPalette },
-  { icon: faRobot },
 ];
 
 export default function Servicios() {
@@ -37,69 +54,68 @@ export default function Servicios() {
   return (
     <section className={styles.section} id="servicios" aria-labelledby="servicios-title">
       <div className={styles.content}>
-        <div className={styles.header}>
-          <p className={styles.label}>{t.servicios.label}</p>
-          <h2 className={styles.title} id="servicios-title">
-            <span>{t.servicios.title[0]}</span>
-            <span>{t.servicios.title[1]}</span>
-          </h2>
-        </div>
-
-        <div className={styles.featuredList}>
-          {featuredServices.map((service, index) => {
-            const content = t.servicios.featured[index];
-
+        <header className={styles.header}>
+          <div className={styles.headerText}>
+            <p className={styles.label}>{t.servicios.label}</p>
+            <h2 className={styles.title} id="servicios-title">
+              <span>{t.servicios.title[0]}</span>
+              <strong>{t.servicios.title[1]}.</strong>
+            </h2>
+          </div>
+          <p className={styles.intro}>{t.servicios.intro}</p>
+        </header>
+        <div className={styles.grid} aria-label={t.servicios.cardsAria}>
+          {t.servicios.items.map((service, index) => {
+            const visual = serviceVisuals[index];
             return (
-              <article className={styles.featuredCard} key={content.title} style={{ "--index": index }}>
+              <article className={styles.card} key={service.title}>
                 <div className={styles.imageFrame}>
                   <Image
-                    src={service.image}
-                    alt={content.alt}
-                    width={797}
-                    height={service.imageHeight}
+                    src={visual.image}
+                    alt={service.alt}
+                    width={visual.width}
+                    height={visual.height}
                     className={styles.image}
-                    priority={index === 0}
                   />
                 </div>
-
                 <div className={styles.cardBody}>
-                  <div className={styles.metaRow}>
-                    <span className={styles.iconBubble} aria-hidden="true">
-                      <FontAwesomeIcon icon={service.icon} />
-                    </span>
-                    {content.eyebrow ? <span className={styles.badge}>{content.eyebrow}</span> : null}
-                  </div>
-                  <h3 className={styles.cardTitle}>
-                    {content.title}
-                    <span className={styles.arrow} aria-hidden="true">
-                      →
-                    </span>
+                  <span className={styles.icon} aria-hidden="true">
+                    <FontAwesomeIcon icon={visual.icon} />
+                  </span>
+                  <h3>
+                    {service.title}
+                    <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
                   </h3>
-                  <p className={styles.description}>{content.description}</p>
-                  <a className={styles.link} href="#contacto">
-                    {t.servicios.proposal}
+                  <p className={styles.description}>{service.description}</p>
+                  <ul className={styles.features}>
+                    {service.features.map((feature) => (
+                      <li key={feature}>
+                        <FontAwesomeIcon icon={faCheck} aria-hidden="true" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a className={styles.cta} href="#contacto" aria-label={`${t.servicios.ctaAria} ${service.title}`}>
+                    {service.cta}
+                    <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
                   </a>
                 </div>
               </article>
             );
           })}
         </div>
-
-        <div className={styles.compactGrid} aria-label={t.servicios.othersAria}>
-          {compactServices.map((service, index) => (
-            <article
-              className={styles.compactCard}
-              key={t.servicios.compact[index].title}
-              style={{ "--index": index + featuredServices.length }}
-            >
-              <span className={styles.compactIcon} aria-hidden="true">
-                <FontAwesomeIcon icon={service.icon} />
-              </span>
-              <h3>{t.servicios.compact[index].title}</h3>
-              <p>{t.servicios.compact[index].description}</p>
-            </article>
-          ))}
-        </div>
+        <aside className={styles.smartCard}>
+          <span className={styles.smartIcon} aria-hidden="true">
+            <FontAwesomeIcon icon={faGear} />
+          </span>
+          <h3>{t.servicios.smart.title}</h3>
+          <p>{t.servicios.smart.description}</p>
+          <a href="#contacto">
+            {t.servicios.smart.cta}
+            <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
+          </a>
+        </aside>
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ export default function Footer() {
       <div className={styles.content}>
         <div className={styles.brand}>
           <Link href="/#inicio" aria-label="Viziona" className={styles.logoLink}>
-            <Image src="/logo.png" alt="Viziona" width={157} height={32} className={styles.logo} />
+            <Image src="/logo-oficial.png" alt="Viziona" width={150} height={35} className={styles.logo} />
           </Link>
           <p>{t.footer.tagline}</p>
           <Link className={styles.cta} href="/#contacto">
