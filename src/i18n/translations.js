@@ -63,7 +63,7 @@ export const translations = {
         {
           title: "Gestión de Redes Sociales",
           description: "Convertimos tus redes en una presencia profesional, coherente y estratégica.",
-          features: ["Estrategia", "Calendario", "Diseño", "Copy", "Reels", "Publicación", "Optimización"],
+          features: ["Estrategia", "Calendario", "Diseño", "Reels", "Publicación", "Optimización"],
           cta: "Quiero mejorar mis redes",
           alt: "Vista de un perfil social de Viziona en un teléfono",
         },
@@ -218,7 +218,6 @@ export const translations = {
           description: "Hago marketing, pero no sé si realmente está funcionando.",
         },
       ],
-      claim: ["No necesitas hacer más marketing.", "Necesitas una estrategia más clara."],
       process: [
         {
           title: "Nos conocemos",
@@ -263,7 +262,7 @@ export const translations = {
       cardTitle: ["Estamos en Barcelona.", "Trabajamos contigo,", "estés donde estés."],
       details: [
         { label: "Teléfono / WhatsApp", value: "602 047 678 - 668 542 008" },
-        { label: "Email", value: "vizionamkt@gmail.com" },
+        { label: "Email", value: "clientes@viziona.es" },
         { label: "Dirección", value: "Diputació 390, Barcelona." },
         { label: "Horario", value: "8:00 am - 20:00 pm" },
       ],
@@ -371,7 +370,7 @@ export const translations = {
         {
           title: "Gestió de Xarxes Socials",
           description: "Convertim les teves xarxes en una presència professional, coherent i estratègica.",
-          features: ["Estratègia", "Calendari", "Disseny", "Copy", "Reels", "Publicació", "Optimització"],
+          features: ["Estratègia", "Calendari", "Disseny", "Reels", "Publicació", "Optimització"],
           cta: "Vull millorar les meves xarxes",
           alt: "Vista d'un perfil social de Viziona en un telèfon",
         },
@@ -526,7 +525,6 @@ export const translations = {
           description: "Faig màrqueting, però no sé si realment està funcionant.",
         },
       ],
-      claim: ["No necessites fer més màrqueting.", "Necessites una estratègia més clara."],
       process: [
         {
           title: "Ens coneixem",
@@ -571,7 +569,7 @@ export const translations = {
       cardTitle: ["Som a Barcelona.", "Treballem amb tu,", "siguis on siguis."],
       details: [
         { label: "Telèfon / WhatsApp", value: "602 047 678 - 668 542 008" },
-        { label: "Email", value: "vizionamkt@gmail.com" },
+        { label: "Email", value: "clientes@viziona.es" },
         { label: "Adreça", value: "Diputació 390, Barcelona." },
         { label: "Horari", value: "8:00 am - 20:00 pm" },
       ],

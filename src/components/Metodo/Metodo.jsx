@@ -1,7 +1,13 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faChartLine, faClock, faImage, faLaptop } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faChartLine,
+  faClock,
+  faImage,
+  faLaptop,
+} from "@fortawesome/free-solid-svg-icons";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import styles from "./Metodo.module.css";
 
@@ -12,7 +18,11 @@ export default function Metodo() {
   const { t } = useLanguage();
 
   return (
-    <section className={styles.section} id="metodo" aria-labelledby="metodo-title">
+    <section
+      className={styles.section}
+      id="metodo"
+      aria-labelledby="metodo-title"
+    >
       <div className={styles.content}>
         <div className={styles.situationsPanel}>
           <p className={styles.eyebrow}>{t.metodo.eyebrow}</p>
@@ -20,7 +30,6 @@ export default function Metodo() {
             <span>{t.metodo.title[0]}</span>
             <strong>{t.metodo.title[1]}</strong>
           </h2>
-
           <div className={styles.situationsGrid}>
             {t.metodo.situations.map((item, index) => (
               <article className={styles.situationCard} key={item.description}>
@@ -31,14 +40,12 @@ export default function Metodo() {
               </article>
             ))}
           </div>
-
-          <p className={styles.claim}>
-            <span>{t.metodo.claim[0]}</span>
-            <strong>{t.metodo.claim[1]}</strong>
-          </p>
         </div>
 
-        <aside className={styles.processPanel} aria-label={t.metodo.processAria}>
+        <aside
+          className={styles.processPanel}
+          aria-label={t.metodo.processAria}
+        >
           <p className={styles.eyebrow}>{t.metodo.processLabel}</p>
           <h3 className={styles.processTitle}>
             <span>{t.metodo.processTitle[0]}</span>

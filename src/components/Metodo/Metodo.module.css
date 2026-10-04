@@ -4,9 +4,23 @@
   padding: clamp(68px, 6.2vw, 96px) clamp(24px, 4.2vw, 78px);
   color: #f8fbfc;
   background:
-    radial-gradient(circle at 1% 8%, rgba(67, 137, 146, 0.48), rgba(67, 137, 146, 0.2) 18%, rgba(7, 24, 39, 0) 38%),
-    radial-gradient(circle at 92% 86%, rgba(66, 186, 196, 0.32), rgba(66, 186, 196, 0.12) 18%, rgba(7, 24, 39, 0) 40%),
-    radial-gradient(circle at 52% 22%, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 32%),
+    radial-gradient(
+      circle at 1% 8%,
+      rgba(67, 137, 146, 0.48),
+      rgba(67, 137, 146, 0.2) 18%,
+      rgba(7, 24, 39, 0) 38%
+    ),
+    radial-gradient(
+      circle at 92% 86%,
+      rgba(66, 186, 196, 0.32),
+      rgba(66, 186, 196, 0.12) 18%,
+      rgba(7, 24, 39, 0) 40%
+    ),
+    radial-gradient(
+      circle at 52% 22%,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0) 32%
+    ),
     linear-gradient(135deg, #03111b 0%, #052235 48%, #071827 100%);
 }
 
@@ -51,8 +65,7 @@
 }
 
 .title,
-.processTitle,
-.claim {
+.processTitle {
   color: #ffffff;
   font-size: clamp(1.9rem, 3vw, 3.42rem);
   font-weight: 800;
@@ -66,8 +79,7 @@
 }
 
 .title strong,
-.processTitle strong,
-.claim strong {
+.processTitle strong {
   color: #42bac4;
   font-weight: 800;
 }
@@ -120,14 +132,6 @@
   line-height: 1.25;
 }
 
-.claim {
-  display: grid;
-  margin-top: clamp(50px, 5.2vw, 78px);
-  padding-left: clamp(58px, 5.8vw, 104px);
-  font-size: clamp(1.6rem, 2.08vw, 2.62rem);
-  line-height: 1.04;
-}
-
 .processPanel {
   display: grid;
   align-content: start;
@@ -168,7 +172,9 @@
 .step:not(:last-child)::before {
   position: absolute;
   top: calc(clamp(27px, 2.65vw, 35px) - 5px);
-  left: calc(clamp(54px, 5vw, 70px) + clamp(18px, 1.8vw, 34px) + clamp(42px, 4.2vw, 82px));
+  left: calc(
+    clamp(54px, 5vw, 70px) + clamp(18px, 1.8vw, 34px) + clamp(42px, 4.2vw, 82px)
+  );
   width: 11px;
   height: 11px;
   border-top: 2px solid rgba(255, 255, 255, 0.44);
@@ -280,10 +286,6 @@
 
   .situationCard {
     min-height: 0;
-  }
-
-  .claim {
-    font-size: clamp(1.55rem, 7vw, 2.3rem);
   }
 
   .cta {
