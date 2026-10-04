@@ -29,7 +29,6 @@ export default function Nosotros() {
             priority
           />
         </div>
-
         <div className={styles.copy}>
           <h2 className={styles.title} id="nosotros-title">
             <span>{t.nosotros.title[0]}</span>
@@ -38,14 +37,12 @@ export default function Nosotros() {
               {t.nosotros.title[2]} <strong>{t.nosotros.title[3]}</strong>
             </span>
           </h2>
-
           <div className={styles.description}>
             {t.nosotros.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
         </div>
-
         <div className={styles.storyColumn}>
           <div className={styles.pillars} aria-label={t.nosotros.pillarsLabel}>
             {t.nosotros.pillars.map((pillar, index) => (
@@ -65,13 +62,12 @@ export default function Nosotros() {
             <blockquote>{t.nosotros.quote}</blockquote>
           </figure>
         </div>
-
-        <div className={`${styles.imagePanel} ${styles.imagePanelLower}`}>
+        <div className={styles.imagePanel}>
           <Image
             src={partnerImages[1]}
             alt={t.nosotros.partnerImages[1]}
-            width={3382}
-            height={1903}
+            width={1672}
+            height={941}
             className={styles.image}
           />
         </div>
