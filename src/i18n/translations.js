@@ -19,7 +19,7 @@ export const translations = {
       title: ["Haz visible", "tu negocio.", "Haz que crezca."],
       text:
         "Estrategia, contenido y gestión de redes sociales para marcas que quieren conectar, ganar visibilidad y convertir su presencia digital en oportunidades.",
-      primaryCta: "Quiere impulsar mi negocio",
+      primaryCta: "Quiero impulsar mi negocio",
       secondaryCta: "Ver servicios",
       scrollHint: "VIZIONA - Estrategia que conecta",
       imageAlt: "Mockup de presencia digital de Viziona",
