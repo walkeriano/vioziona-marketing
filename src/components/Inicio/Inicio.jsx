@@ -33,7 +33,7 @@ export default function Inicio() {
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src="/bg-hero-oficial.png"
+            src="/bg-listo.png"
             alt={t.inicio.imageAlt}
             width={1672}
             height={941}
