@@ -58,9 +58,9 @@ export default function Footer() {
 
         <address className={styles.contact}>
           <h2>{t.footer.contactLabel}</h2>
-          <a href="mailto:vizionamkt@gmail.com">
+          <a href="mailto:clientes@viziona.es">
             <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
-            vizionamkt@gmail.com
+            clientes@viziona.es
           </a>
           <a href="tel:+34602047678">
             <FontAwesomeIcon icon={faPhone} aria-hidden="true" />
