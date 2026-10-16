@@ -40,7 +40,7 @@ export default function Contacto() {
       return;
     }
 
-    formData.append("_subject", "Nuevo contacto desde la web de Viziona");
+    formData.append("_subject", "Nueva solicitud de cliente");
 
     setStatus("submitting");
 
