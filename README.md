@@ -31,6 +31,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
+### Formulario de contacto (Formspree)
+
+Configura `NEXT_FORMSPREE_ENDPOINT` con la URL de envío de tu formulario
+(por ejemplo, `https://formspree.io/f/TU_FORM_ID`) en las variables del proyecto
+en Vercel. Actívala para **Production** y, si quieres probar despliegues de
+vista previa, también para **Preview**.
+
+Después de añadir o cambiar la variable, vuelve a desplegar el proyecto:
+la página de inicio se genera estáticamente y lee el valor durante el build.
+La página del servidor pasa esta URL pública al formulario mediante una prop.
+No leas esta variable directamente en un componente cliente: Next.js no expone
+al navegador variables sin el prefijo `NEXT_PUBLIC_`.
+El valor debe ser la URL de envío, no una clave API ni una URL del panel de Formspree.
+
+Tras desplegar, envía una prueba desde el formulario publicado y comprueba
+el mensaje de éxito y la recepción en Formspree y en el correo de destino.
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -14,10 +14,9 @@ import {
 import { useLanguage } from "@/i18n/LanguageProvider";
 import styles from "./Contacto.module.css";
 
-const formspreeEndpoint = process.env.NEXT_FORMSPREE_ENDPOINT;
 const detailIcons = [faPhoneVolume, faEnvelope, faLocationDot, faClock];
 
-export default function Contacto() {
+export default function Contacto({ formspreeEndpoint }) {
   const { t } = useLanguage();
   const [status, setStatus] = useState("idle");
 

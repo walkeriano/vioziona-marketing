@@ -15,7 +15,7 @@ export default function Home() {
       <Servicios />
       <Suscripciones />
       <Metodo />
-      <Contacto />
+      <Contacto formspreeEndpoint={process.env.NEXT_FORMSPREE_ENDPOINT?.trim()} />
       <Footer />
     </main>
   );
